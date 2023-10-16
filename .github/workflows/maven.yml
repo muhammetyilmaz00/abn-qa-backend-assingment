@@ -27,6 +27,6 @@ jobs:
         env:
           CUCUMBER_REPORT_TOKEN: ${{ secrets.CUCUMBER_REPORT_TOKEN }}
         run: |
-          TAG="$(date +'%Y%m%d%H%M%S)"
+          TAG="$(date +'%Y%m%d%H%M%S')"
           mvn clean verify -Dcucumber.options="--tags @${TAG}"
           cucumber-reports upload --tags "${TAG}" --token $CUCUMBER_REPORT_TOKEN target/cucumber-report.json
