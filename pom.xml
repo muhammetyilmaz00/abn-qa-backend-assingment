@@ -77,7 +77,7 @@
                     <testFailureIgnore>true</testFailureIgnore>
                     <skipTests>false</skipTests>
                     <includes>
-                        <include>*/runners/*TestRunner.java</include>
+                        <include>**/*TestRunner.java</include>
                     </includes>
                 </configuration>
             </plugin>
