@@ -83,3 +83,5 @@ To execute the test suite, follow these steps:
 After running the tests, you can access the test report via the link provided in the console log under the line that reads "View your Cucumber Report at:". The report will contain detailed information about the test results, including passed and failed scenarios.
 
 ![report.png](report.png)
+
+For access to the Continuous Integration (CI) test reports, please utilize the following link: [Report Collection](https://reports.cucumber.io/report-collections/d443f9b5-507d-47cc-bc94-7aec3435dcff)
