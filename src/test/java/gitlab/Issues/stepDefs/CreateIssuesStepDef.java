@@ -1,11 +1,11 @@
-package gitLabIssues.stepDefs;
+package gitlab.Issues.stepDefs;
 
-import gitLabIssues.pojo.Issue;
-import gitLabIssues.requests.CallService;
-import gitLabIssues.utils.BaseTest;
-import gitLabIssues.utils.ContextStore;
-import gitLabIssues.utils.IssueUtils;
-import gitLabIssues.utils.LogUtils;
+import gitlab.Issues.pojo.Issue;
+import gitlab.Issues.requests.CallService;
+import gitlab.Issues.utils.BaseTest;
+import gitlab.Issues.utils.ContextStore;
+import gitlab.Issues.utils.IssueUtils;
+import gitlab.Issues.utils.LogUtils;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
@@ -45,7 +45,7 @@ public class CreateIssuesStepDef extends BaseTest {
         LogUtils.logInfo("Creating a new issue in the project successfully completed!");
     }
 
-    @Then("Response status code should be {}")
+    @Then("response status code should be {}")
     public void responseStatusShouldBe(int statusCode) {
         // retrieves the stored response from the context store
         Response response = ContextStore.get("response");
@@ -72,11 +72,11 @@ public class CreateIssuesStepDef extends BaseTest {
     }
 
     @Then("I verify the response for the expected parameters")
-    public void iVerifyTheResponseForTheExpectedParameters() {
+    public void iVerifyTheResponseForTheExpectedParameters(DataTable dataTable) {
         LogUtils.logInfo("Verifying the response for the expected parameters...");
 
-        // retrieves the stored keyValueMap from the context store
-        Map<String, Object> keyValueMap = ContextStore.get("keyValueMap");
+        // converts the DataTable to a Map
+        Map<String, Object> keyValueMap = dataTable.asMap(String.class, Object.class);
 
         // retrieves the stored response from the context store
         Response response = ContextStore.get("response");

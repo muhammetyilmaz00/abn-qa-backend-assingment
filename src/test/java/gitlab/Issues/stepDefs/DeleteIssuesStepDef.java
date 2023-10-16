@@ -1,11 +1,11 @@
-package gitLabIssues.stepDefs;
+package gitlab.Issues.stepDefs;
 
 import com.google.gson.reflect.TypeToken;
-import gitLabIssues.pojo.Issue;
-import gitLabIssues.requests.CallService;
-import gitLabIssues.utils.BaseTest;
-import gitLabIssues.utils.ContextStore;
-import gitLabIssues.utils.LogUtils;
+import gitlab.Issues.pojo.Issue;
+import gitlab.Issues.requests.CallService;
+import gitlab.Issues.utils.BaseTest;
+import gitlab.Issues.utils.ContextStore;
+import gitlab.Issues.utils.LogUtils;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

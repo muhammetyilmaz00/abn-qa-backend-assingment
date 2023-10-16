@@ -1,8 +1,8 @@
-package gitLabIssues.stepDefs;
+package gitlab.Issues.stepDefs;
 
-import gitLabIssues.requests.CallService;
-import gitLabIssues.utils.BaseTest;
-import gitLabIssues.utils.LogUtils;
+import gitlab.Issues.requests.CallService;
+import gitlab.Issues.utils.BaseTest;
+import gitlab.Issues.utils.LogUtils;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.RestAssured;
@@ -45,8 +45,7 @@ public class RateLimitStepDef extends BaseTest {
         executorService.shutdown();
 
         // wait for all threads to finish
-        while (!executorService.isTerminated()) {
-        }
+        while (!executorService.isTerminated()) {}
 
         // get the elapsed time
         long currentTime = System.currentTimeMillis();

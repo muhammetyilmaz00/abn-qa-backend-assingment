@@ -1,4 +1,4 @@
-package gitLabIssues.requests;
+package gitlab.Issues.requests;
 
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;

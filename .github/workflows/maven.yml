@@ -8,7 +8,7 @@ on:
   pull_request:
     branches: [ main ]
   workflow_dispatch:  
-    
+
 
 jobs:
   build:
@@ -21,4 +21,6 @@ jobs:
           java-version: '17'
           distribution: 'adopt'
       - name: Build and Test
+        env:
+          CUCUMBER_REPORT_TOKEN: ${{ secrets.CUCUMBER_REPORT_TOKEN }}
         run: mvn clean verify

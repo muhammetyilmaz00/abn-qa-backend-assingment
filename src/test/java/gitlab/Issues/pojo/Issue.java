@@ -1,4 +1,4 @@
-package gitLabIssues.pojo;
+package gitlab.Issues.pojo;
 
 import com.google.gson.annotations.SerializedName;
 import lombok.Data;

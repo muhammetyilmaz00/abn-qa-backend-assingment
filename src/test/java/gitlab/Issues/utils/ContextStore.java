@@ -1,4 +1,4 @@
-package gitLabIssues.utils;
+package gitlab.Issues.utils;
 
 import java.util.concurrent.ConcurrentHashMap;
 

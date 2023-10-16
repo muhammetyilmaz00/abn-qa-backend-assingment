@@ -1,6 +1,6 @@
-package gitLabIssues.utils;
+package gitlab.Issues.utils;
 
-import gitLabIssues.pojo.Issue;
+import gitlab.Issues.pojo.Issue;
 
 public class IssueUtils {
 

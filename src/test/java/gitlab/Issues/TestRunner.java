@@ -1,4 +1,4 @@
-package gitLabIssues;
+package gitlab.Issues;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
                 "json:target/cucumber.json"
         },
         features = {"src/test/resources/features"},
-        glue = {"gitLabIssues/stepDefs", "gitLabIssues.utils"},
+        glue = {"gitlab/Issues/stepDefs", "gitlab/Issues/utils"},
         publish = true,
         tags = "@GitLabIssues"
 )

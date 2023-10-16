@@ -1,4 +1,4 @@
-package gitLabIssues.utils;
+package gitlab.Issues.utils;
 
 import java.io.FileInputStream;
 import java.io.IOException;

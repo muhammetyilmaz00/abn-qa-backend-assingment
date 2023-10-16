@@ -1,4 +1,4 @@
-package gitLabIssues.utils;
+package gitlab.Issues.utils;
 
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
@@ -12,13 +12,11 @@ public class BaseTest {
     public static final String ISSUES_ENDPOINT = "/issues/";
     public static final String PROJECTS_ENDPOINT = "/projects/";
     public static final String GROUPS_ENDPOINT = "/groups/";
-    public static String PRIVATE_TOKEN;
     public static String PROJECT_ID ;
     public static String GROUP_ID ;
 
     public static void setUp() {
         baseURI = PropertiesFactory.getProperty("baseURI");
-        PRIVATE_TOKEN = PropertiesFactory.getProperty("token");
         PROJECT_ID = PropertiesFactory.getProperty("projectId");
         GROUP_ID = PropertiesFactory.getProperty("groupId");
         requestSpecification = given().accept(ContentType.JSON).header("PRIVATE-TOKEN", PropertiesFactory.getProperty("token"));

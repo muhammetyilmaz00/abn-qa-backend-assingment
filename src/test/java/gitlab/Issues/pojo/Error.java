@@ -1,4 +1,4 @@
-package gitLabIssues.pojo;
+package gitlab.Issues.pojo;
 
 import lombok.Data;
 

@@ -1,5 +1,6 @@
-package gitLabIssues.utils;
+package gitlab.Issues.utils;
 
+import gitlab.Issues.stepDefs.DeleteIssuesStepDef;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
@@ -10,7 +11,7 @@ import static io.restassured.RestAssured.reset;
 public class Hooks {
     private static Scenario scenario;
 
-    public static String getScenarioName(){
+    public static String getScenarioName() {
         return scenario.getName();
     }
 
@@ -27,7 +28,7 @@ public class Hooks {
         // Load Log4j configuration file
         Configurator.initialize(null, "src/test/resources/config/log4j2.xml");
 
-        LogUtils.logInfo("Started Scenario: "+getScenarioName());
+        LogUtils.logInfo("Started Scenario: " + getScenarioName());
     }
 
     /**
@@ -36,6 +37,13 @@ public class Hooks {
     @After
     public static void tearDown() {
         reset();
-        LogUtils.logInfo("Finished Scenario: "+getScenarioName());
+        LogUtils.logInfo("Finished Scenario: " + getScenarioName());
+    }
+
+    // Delete the created issue if @DeleteIssue annotation is present
+    @After(value = "@DeleteIssue")
+    public static void deleteIssue() {
+        DeleteIssuesStepDef deleteIssuesStepDef = new DeleteIssuesStepDef();
+        deleteIssuesStepDef.deleteTheCreatedIssue();
     }
 }
